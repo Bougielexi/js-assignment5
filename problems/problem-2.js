@@ -49,6 +49,10 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 
-const jedi = strings // append your code here
+const jedi = strings
+	// create new array turning stings to objects
+	.map(string => JSON.parse(`{${string}}`))
+	// filter the occupation to return only 'Jedi's
+	.filter(string => string.occupation?.includes('Jedi'))
 
 test("Problem 2", jedi)

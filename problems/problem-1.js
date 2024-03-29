@@ -29,6 +29,8 @@ const people = [
 	{ firstName: 'Marie', lastName: 'Curie', age: 66 }
 ]
 
-const peopleStrings = people // append your array methods here
+//map "Name:" using firstName and lastName followed by "Age:" using age
+const peopleStrings = people.map(person => `Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`)
+
 
 test("Problem 1", peopleStrings)
